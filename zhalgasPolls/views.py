@@ -6,11 +6,11 @@ from .models import Text
 
 def index(request):
     someText = Text.objects.all()
-    return render(request, 'zhalgasPolls/index.html', {'someText': someText})
+    return render(request, 'index.html', {'someText': someText})
 
 def change(request):
     someText = Text.objects.all()
-    return render(request, 'zhalgasPolls/change.html', {'someText': someText})
+    return render(request, 'change.html', {'someText': someText})
 
 def update(request):
     postText = request.POST.getlist('myText')
